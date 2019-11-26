@@ -1,0 +1,29 @@
+@import "node_modules/mapbox-gl/dist/mapbox-gl";
+
+.mapboxgl-map {
+  .mountain_pass_marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjEwMHB4IiB3aWR0aD0iMTAwcHgiICBmaWxsPSIjZmZmZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgeD0iMHB4IiB5PSIwcHgiPjxnPjxwYXRoIGQ9Ik0xOS44OSw5LjU1YTEsMSwwLDAsMC0xLjc2LS4wNWwtMTUsMjhhMSwxLDAsMCwwLDAsMUExLDEsMCwwLDAsNCwzOUgzMmExLDEsMCwwLDAsLjg5LTEuNDVaIj48L3BhdGg+PHBhdGggZD0iTTQ1Ljg4LDM3LjUybC0xMS0yMmExLDEsMCwwLDAtLjgxLS41MiwxLDEsMCwwLDAtLjg4LjQxbC01LjE0LDdMMzUuNjksMzlINDVhMSwxLDAsMCwwLC44Ni0uNDlBMSwxLDAsMCwwLDQ1Ljg4LDM3LjUyWiI+PC9wYXRoPjwvZz48L3N2Zz4=");
+    background-size: 80% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .mountain_pass_popup {
+    & > * {
+      margin: 0 0 5px 0;
+      line-height: 1.1;
+    }
+
+    .open {
+      color: #08d500;
+    }
+
+    .closed {
+      color: #FF000D;
+    }
+  }
+}
+

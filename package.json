@@ -1,0 +1,25 @@
+{
+  "name": "itinisere-map",
+  "version": "0.1.0",
+  "description": "A js utility to display Itinisere traffic data on an interactive map",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass src/styles -o dist/css/ && browserify src/scripts/main.js -o dist/js/itinisere-map.js -t [ babelify --presets [ @babel/preset-env ] ] && cp -R assets dist/.",
+    "sass": "node-sass -w src/styles/ -o dist/css/",
+    "watch": "node-sass -w src/styles/ -o dist/css/ & watchify src/scripts/main.js -o dist/js/itinisere-map.js -t [ babelify --presets [ @babel/preset-env ] ] -v"
+  },
+  "author": "Hotentic",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
+    "node-sass": "^4.12.0",
+    "watchify": "^3.11.1"
+  },
+  "dependencies": {
+    "@mapbox/geojson-extent": "^0.3.2",
+    "mapbox-gl": "^1.5.0"
+  }
+}

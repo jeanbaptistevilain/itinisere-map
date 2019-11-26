@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>itinisere-map - test page</title>
+  <link href="dist/css/style.css" rel="stylesheet"/>
+  <style>
+    #map_wrapper {
+      height: 60vh;
+      width: 80%;
+      margin: 20vh auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="map_wrapper"></div>
+  <script src="dist/js/itinisere-map.js"></script>
+  <script>
+    function displayMapData(map) {
+      itinisereMap.displayTrafficStatus(map);
+      itinisereMap.displayMountainPasses(map);
+    }
+    itinisereMap.config.userKey = "my_user_key";
+    itinisereMap.config.apiHost = "https://my.api.host";
+    itinisereMap.config.mapboxStyle = "https://my.mapbox.style";
+    itinisereMap.config.mapboxToken = "my_mapbox_token"; // Required if you use Mapbox hosting service
+
+    itinisereMap.initMap("#map_wrapper", displayMapData);
+  </script>
+</body>
+</html>
